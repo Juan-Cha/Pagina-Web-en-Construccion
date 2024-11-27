@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sitio en Construcción</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #2a9d8f;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: #264653;
+            margin-bottom: 30px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .construction-icon {
+            font-size: 100px;
+            color: #e9c46a;
+            animation: bounce 2s ease-in-out infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Botón */
+        .contact-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #e76f51;
+            color: #fff;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #d45b3e;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="construction-icon">🚧</div>
+        <h1>Sitio en Construcción</h1>
+        <p>Estamos trabajando en algo increíble. ¡Vuelve pronto!</p>
+        <a href="mailto:jddca874@gmail.com" class="contact-btn">Contáctanos</a>
+    </div>
+
+    <script>
+        // Animación para cambiar de color el icono cada 5 segundos
+        setInterval(() => {
+            const icon = document.querySelector('.construction-icon');
+            const colors = ['#e9c46a', '#f4a261', '#2a9d8f', '#264653'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            icon.style.color = randomColor;
+        }, 5000);
+    </script>
+
+</body>
+</html>
